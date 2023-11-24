@@ -6,7 +6,7 @@ const invokeAction = async ({ action, id, ...data }) => {
     case "list":
       const allContacts = await contactsService.listContacts();
       return console.table(allContacts);
-    case "contactById":
+    case "getContactById":
       const contactById = await contactsService.getContactById(id);
       return console.log("Searched contact", contactById);
     case "removeContact":
