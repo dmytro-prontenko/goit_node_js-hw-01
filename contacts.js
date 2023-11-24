@@ -22,7 +22,7 @@ export async function removeContact(contactId) {
     (item) => item.id === contactId
   );
 
-  const removedContact = contacts.splice(contactToRemoveIndex, 1);
+  const [removedContact] = contacts.splice(contactToRemoveIndex, 1);
   if (contactToRemoveIndex === -1) {
     return null;
   }
